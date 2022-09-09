@@ -167,7 +167,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         static $bodyStream;
 
         if (empty($bodyStream)) {
-            $bodyStream = \GuzzleHttp\Psr7\stream_for('<xml><d ok="true" /></xml>');
+            $bodyStream = \GuzzleHttp\Psr7\Utils::streamFor('<xml><d ok="true" /></xml>');
         }
 
         return $bodyStream;
